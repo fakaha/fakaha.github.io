@@ -14,6 +14,9 @@
     <!-- BOOTSTRAP ICON -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
+    <!-- LINK AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
     <!-- LINK CSS -->
     <link rel="stylesheet" href="style.css">
 
@@ -21,7 +24,7 @@
 <body id="home">
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-primary navbar-dark shadow fixed-top">
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark shadow fixed-top" data-aos="fade-down" data-aos-duration="800">
         <div class="container">
           <a class="navbar-brand" href="#">Zulfa Fakaha</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +44,7 @@
 
     <!-- JUMBOTRON (BOOTSTRAP 4.6) -->
     <section class="jumbotron text-center">
-        <img src="asset/foto2resize.jpg" alt="Zulfa Fakaha" width="250" class="rounded-circle img-thumbnail">
+        <img src="asset/foto2resize.jpg" alt="Zulfa Fakaha" width="250" class="rounded-circle img-thumbnail" data-aos="flip-right" data-aos-duration="1200">
         <h1 class="display-4">Zulfa Fakaha</h1>
         <p class="lead">Student | Engineer</p>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,192L40,160C80,128,160,64,240,80C320,96,400,192,480,229.3C560,267,640,245,720,208C800,171,880,117,960,106.7C1040,96,1120,128,1200,149.3C1280,171,1360,181,1400,186.7L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>      </section>
@@ -56,9 +59,9 @@
                     </div>
                 </div>
                 <div class="row justify-content-center fs-5 text-center"> <!--justify-content-center untuk membuat kedua col-5 ke tengah-->
-                    <div class="col-md-5">
+                    <div class="col-md-5" data-aos="fade-right"  data-aos-duration="800"  data-aos-once="true">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem incidunt, facere praesentium aliquid molestiae provident iure maiores, molestias alias voluptates commodi velit illum sint nostrum!</p></div>
-                    <div class="col-md-5">
+                    <div class="col-md-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="250" data-aos-once="true">
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque animi recusandae laudantium doloribus libero dolore cupiditate in incidunt hic amet?</p>
                     </div>
                 </div>
@@ -77,7 +80,7 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-md-4 mb-3">
-                        <div class="card">
+                        <div class="card kartu" data-aos="flip-left">
                             <img src="asset/keyboard.jpg" class="card-img-top" alt="project 1">
                             <div class="card-body">
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -85,7 +88,7 @@
                           </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <div class="card">
+                        <div class="card kartu" data-aos="flip-left" data-aos-delay="100">
                             <img src="asset/keyboard3.jpg" class="card-img-top" alt="project 2">
                             <div class="card-body">
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -93,7 +96,7 @@
                           </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <div class="card">
+                        <div class="card kartu" data-aos="flip-left" data-aos-delay="150">
                             <img src="asset/keyboard5.jpg" class="card-img-top" alt="project 3">
                             <div class="card-body">
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>                            
@@ -101,7 +104,7 @@
                           </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <div class="card">
+                        <div class="card kartu" data-aos="flip-left" data-aos-delay="200">
                             <img src="asset/keyboard4.jpg" class="card-img-top" alt="project 4">
                             <div class="card-body">
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>                            
@@ -109,7 +112,7 @@
                           </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <div class="card">
+                        <div class="card kartu" data-aos="flip-left" data-aos-delay="250">
                             <img src="asset/keyboard2.jpg" class="card-img-top" alt="project 5">
                             <div class="card-body">
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>                            
@@ -173,6 +176,17 @@
             <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/zulfa_fakaha/" class="text-white fw-bold">Zulfa Fakaha</a></p>
         </footer>
         <!-- AKHIR FOOTER -->
+
+        <!-- SCRIPT AOS -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          const kartuAos = document.querySelectorAll('.kartu');
+          kartuAos.forEach((namaBebas, i) => {
+            namaBebas.dataset.aosDuration = 800;
+          })
+          AOS.init();
+        </script>
+
 
         <script>
           const scriptURL = 'https://script.google.com/macros/s/AKfycbyStM_pa8PmGUTbxtxSjaqM2tOaHsdl-zvQXQbXs1wQCsbBVjyBEdR8HJGJJbhWBaW2WA/exec'
